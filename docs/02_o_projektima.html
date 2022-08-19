@@ -26,13 +26,9 @@
     <link rel="stylesheet" type="text/css" href="_static/webglinteractive.css" />
     <link rel="stylesheet" type="text/css" href="_static/karel.css" />
     <link rel="stylesheet" type="text/css" href="_static/notes.css" />
-    <link rel="stylesheet" type="text/css" href="_static/simanim.css" />
-    <link rel="stylesheet" type="text/css" href="_static/pycode.css" />
-    <link rel="stylesheet" type="text/css" href="_static/p5js.css" />
     <link rel="stylesheet" type="text/css" href="_static/gallery.css" />
-    <link rel="stylesheet" type="text/css" href="_static/dbDirective.css" />
     <link rel="stylesheet" type="text/css" href="_static/associations.css" />
-    <link rel="stylesheet" type="text/css" href="_static/regex-check.css" />
+    <link rel="stylesheet" type="text/css" href="_static/editor.css" />
     <link rel="stylesheet" href="_static/user-highlights.css" type="text/css" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" type="text/css" />
     <link rel="stylesheet" href="_static/bootstrap-4.0.0-dist/css/bootstrap.min.css" type="text/css" />
@@ -112,44 +108,12 @@
     <script type="text/javascript" src="_static/karel-i18n.en.js"></script>
     <script type="text/javascript" src="_static/notes.js"></script>
     <script type="text/javascript" src="_static/pygamelib-init.js"></script>
-    <script type="text/javascript" src="_static/blockly/blockly_compressed.js"></script>
-    <script type="text/javascript" src="_static/blockly/blocks_compressed.js"></script>
-    <script type="text/javascript" src="_static/blockly/python_compressed.js"></script>
-    <script type="text/javascript" src="_static/blockly/msg-sr.js"></script>
-    <script type="text/javascript" src="_static/blockpy/utilities.js"></script>
-    <script type="text/javascript" src="_static/blockpy/python_errors.js"></script>
-    <script type="text/javascript" src="_static/blockpy/ast_node_visitor.js"></script>
-    <script type="text/javascript" src="_static/blockpy/abstract_interpreter.js"></script>
-    <script type="text/javascript" src="_static/blockpy/pytifa.js"></script>
-    <script type="text/javascript" src="_static/blockpy/abstract_interpreter_definitions.js"></script>
-    <script type="text/javascript" src="_static/blockpy/python_to_blockly.js"></script>
-    <script type="text/javascript" src="_static/blockpy/imported.js"></script>
-    <script type="text/javascript" src="_static/blockpy/blocks/class.js"></script>
-    <script type="text/javascript" src="_static/blockpy/blocks/comment.js"></script>
-    <script type="text/javascript" src="_static/blockpy/blocks/comprehensions.js"></script>
-    <script type="text/javascript" src="_static/blockpy/blocks/dict.js"></script>
-    <script type="text/javascript" src="_static/blockpy/blocks/if.js"></script>
-    <script type="text/javascript" src="_static/blockpy/blocks/io.js"></script>
-    <script type="text/javascript" src="_static/blockpy/blocks/lists.js"></script>
-    <script type="text/javascript" src="_static/blockpy/blocks/sets.js"></script>
-    <script type="text/javascript" src="_static/blockpy/blocks/loops.js"></script>
-    <script type="text/javascript" src="_static/blockpy/blocks/parking.js"></script>
-    <script type="text/javascript" src="_static/blockpy/blocks/tuple.js"></script>
-    <script type="text/javascript" src="_static/blockpy/blocks/turtles.js"></script>
-    <script type="text/javascript" src="_static/blockpy/blocks/text.js"></script>
-    <script type="text/javascript" src="_static/blockpy-modal.js"></script>
-    <script type="text/javascript" src="_static/simanim.js"></script>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/pyodide/v0.16.1/full/pyodide.js"></script>
-    <script type="text/javascript" src="_static/pycode.js"></script>
-    <script type="text/javascript" src="//toolness.github.io/p5.js-widget/p5-widget.js"></script>
-    <script type="text/javascript" src="_static/p5js.js"></script>
     <script type="text/javascript" src="_static/gallery.js"></script>
-    <script type="text/javascript" src="_static/dbDirective.js"></script>
-    <script type="text/javascript" src="_static/sql.js"></script>
     <script type="text/javascript" src="_static/associations.js"></script>
     <script type="text/javascript" src="_static/associations-i18n.en.js"></script>
-    <script type="text/javascript" src="_static/regex-check.js"></script>
-    <script type="text/javascript" src="_static/regex-check-i18n.en.js"></script>
+    <script type="text/javascript" src="_static/editor.js"></script>
+    <script type="text/javascript" src="_static/jszip.js"></script>
+    <script type="text/javascript" src="_static/editor-i18n.en.js"></script>
     <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/javascript" src="_static/jquery-ui-1.10.3.custom.min.js"></script>
     <script type="text/javascript" src="_static/jquery-fix.js"></script>
@@ -227,16 +191,44 @@
   
   <div class="section" id="id1">
 <h1>О изради пројеката<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
-<p>Пре него што поченш да се бавиш неким конкретним пројектом, потребно је да отприлике сагледаш шта те све очекује у том послу.</p>
+<p>Пре него што почнеш да се бавиш неким конкретним пројектом, потребно је да у главним цртама сагледаш шта те све очекује у том послу.</p>
+<p>Шта карактерише сваки добар пројекaт?</p>
+<ul class="simple">
+<li><p>Има <strong>циљ</strong> и резултира <strong>производом</strong>.</p></li>
+<li><p>Подразумева <strong>сложенији задатак</strong> који се разлаже на једноставније, рутинске.</p></li>
+<li><p>Има одређено време трајања, односно <strong>рок</strong> за завршетак.</p></li>
+<li><p>По правилу укључује <strong>рад више ученика</strong> (група).</p></li>
+<li><p>Подразумева <strong>сарадњу</strong> и <strong>координацију</strong> свих учесника.</p></li>
+</ul>
+<p>Шта подразумева ток пројекта?</p>
+<ul class="simple">
+<li><p>Проналажење теме пројекта.</p></li>
+<li><p>Одређивање задатка или циља пројекта.</p></li>
+<li><p>Планирање пројекта.</p></li>
+<li><p>Израда пројекта.</p></li>
+<li><p>Представљање – презентација пројекта.</p></li>
+<li><p>Вредновање - евалуација пројекта.</p></li>
+</ul>
+<p>Шта добијаш учешћем у изради пројекта?</p>
+<p>Радом на пројекту развићеш способности:</p>
+<ul class="simple">
+<li><p>да радиш у групи,</p></li>
+<li><p>да самостално проналазиш информације,</p></li>
+<li><p>да критички процењујеш резултате рада,</p></li>
+<li><p>да решаваш проблеме,</p></li>
+<li><p>да одлучујеш и излажеш своје ставове,</p></li>
+<li><p>да користиш нове методе рада.</p></li>
+</ul>
+<p>Размотимо сада детаљније етапе у току рада на пројекту.</p>
 <div class="section" id="id2">
 <h2>Избор теме и евентуално формирање групе<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
-<p>Било би добро да на почетку наставник поразговара са одељењем о могућим темама пројекта. Теме може да предлаже и наставник и ученици. Очекивани производ пројектног задатка је мултимедијални садржај у форми: стрипа, анимације, игрице и сл., а свакако су добродошли и пројекти у којима се решава и неки проблемски задатак и саставља сложенији алгоритам и програм за решавање тог задатка. Окружење Скреч пружа могућности за израду свега набројаног, па ћемо на даље претпоставити да радиш пројекат у Скречу, а ти можеш у договору са наставником да дефинишеш и пројекат у неком сличном окружењу, или нешто сасвим другачије.</p>
+<p>Било би добро да на почетку наставник поразговара са одељењем о могућим темама пројекта. Теме могу да предлажу и наставник и ученици. Очекивани производ пројектног задатка је мултимедијални садржај у форми: стрипа, анимације, игрице и слично, а свакако су добродошли и пројекти у којима се решава неки проблемски задатак и саставља сложенији алгоритам и програм за решавање тог задатка. Окружење Скреч пружа могућности за израду свега набројаног, па ћемо надаље претпоставити да радиш пројекат у Скречу, а ти можеш, у договору са наставником, да дефинишеш и пројекат у неком сличном окружењу, или нешто сасвим другачије.</p>
 <p>Циљ разговора о темама је да се види ко би какав пројекат желео да ради. Ако ти је неки пројекат занимљив, али делује тешко за реализацију, покушај да нађеш некога са ким ћеш да се удружиш. Требало би да наставник узме у обзир тежину предложених пројеката и изражене жеље, а затим да одреди ко ће радити самостално, а ко у пару или мањој групи. Провери да ли, уколико буде потребно, ти и твој тим можете да рачунате на савете и подршку наставника или неког другог.</p>
 <p>Након што одабереш тему пројекта и знаш да ли на пројекту радиш самостално или у пару/групи, потребно је оквирно одредити обим пројекта - шта све желиш или желите да урадите у том пројекту. Када поставиш границе пројекта, треба отприлике да имаш идеју како изгледа сценарио твог пројекта и како би, у грубим цртама, тај пројекат могао да се оствари (реализује).</p>
 </div>
 <div class="section" id="id3">
 <h2>Планирање<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
-<p>У складу са расположивим временом и бројем учесника на пројекту, треба размотрити на који начин ће бити урађено све што је потребно за израду пројекта. Ако су потребне додатне слике за позадину или ликове, размисли да ли је боље направити слике у неком програму као што је <em>Бојанка</em> (<em>Paint</em>), или неки напреднији који умеш да користиш, или потражити готове слике на интернету, водећи рачуна о ауторским правима. Исто важи и за додатне звукове. Као што вероватно знаш, у Скречу можеш да снимиш звучни запис, који ћеш затим да користиш у програму. Осим што може да буде забавно, то целом пројекту може да да лични печат и допринесе оригиналности.</p>
+<p>У складу са расположивим временом и бројем учесника на пројекту, треба размотрити на који начин ће бити урађено све што је потребно за израду пројекта. Ако су потребне додатне слике за позадину или ликове, размисли да ли је боље направити слике у неком програму као што је <em>Бојанка</em> (<em>Paint</em>), или у неком напреднијем који умеш да користиш, или потражити готове слике на интернету, водећи рачуна о ауторским правима. Исто важи и за додатне звукове. Као што вероватно знаш, у Скречу можеш да снимиш звучни запис, који ћеш затим да користиш у програму. Осим што може да буде забавно, то целом пројекту може да да лични печат и допринесе оригиналности.</p>
 <p>Добро је да при планирању постоји резервни план, односно алтернативе. На пример, ако се неки део пројекта покаже као тежак за израду, вероватно постоји једноставнија варијанта, која можда није једнако атрактивна, али омогућава успешно окончање пројекта. Дакле, потпуно је у реду да опис детаљнијег плана садржи реченице попут: ово ћемо да урадимо на начин А, а ако не буде довољно времена (или не будемо умели), онда на начин Б. Могућа је и обрнута формулација: урадићемо на начин Б, а ако остане времена дорадићемо пројекат и направити то на начин А.</p>
 <p>Током планирања треба доћи до сасвим јасне идеје о подели посла међу члановима тима, као и детаљима пројекта. На пример:</p>
 <ul class="simple">
@@ -254,19 +246,19 @@
 <div class="section" id="id5">
 <h2>Представљање<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h2>
 <p>Природан начин представљања Скреч пројеката је да се демонстрира рад програма. Осим тога, добро је да се укратко прође кроз скрипте ликова и позорнице, а по потреби и кроз коришћене звукове, костиме и позадине.</p>
-<p>Ако време допушта (ваше време за израду, и расположиво време на часу за представљање), ти и твој тим можете да направите и сасвим кратку презентзацију, која даје додатне информације које желите да поделите. То може да буде било шта што желите да саопштите, на пример: зашто сте одабрали баш ту тему (ако постоји посебан разлог), шта сте све користили, ко је шта радио, како сте решили неки проблем, неки забаван тренутак, или било шта друго. Ако правите презентацију на рачунару, довољно је нпр. 5 слајдова.</p>
-<p>Пројекти могу да буду представљени и ван оделења, нарочито они успешнији. Може, на пример, да се организује отворени час, смотра радова, изложба и слично. Таквој манифестацији могу да присуствују ученици и наставници других оделења или школа, родитељи и други заинтересовани.</p>
+<p>Ако време допушта (ваше време за израду, и расположиво време на часу за представљање), ти и твој тим можете да направите и сасвим кратку презентацију, која даје додатне информације које желите да поделите. То може да буде било шта што желите да саопштите, на пример: зашто сте одабрали баш ту тему (ако постоји посебан разлог), шта сте све користили, ко је шта радио, како сте решили неки проблем, неки забаван тренутак, или било шта друго. Ако правите презентацију на рачунару, довољно је нпр. 5 слајдова.</p>
+<p>Пројекти могу да буду представљени и ван одељења, нарочито они успешнији. Може, на пример, да се организује отворени час, смотра радова, изложба и слично. Таквој манифестацији могу да присуствују ученици и наставници других одељења или школа, родитељи и други заинтересовани.</p>
 </div>
 <div class="section" id="id6">
 <h2>Самовредновање<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h2>
 <p>Било би корисно да након израђеног пројекта размислиш или поразговараш са члановима тима о томе како је протекла израда. На пример, можеш да поставиш себи следећа питања:</p>
 <ul class="simple">
-<li><p>Да ли је, по твојој процени, пројекат успешно приведен крају? Колико си ти лично задовољан-задовољна урађеним? Зашто?</p></li>
-<li><p>Који део је био посебно тежак? Како си га решио-решила? Да ли је постојао неки проблем чијим решавањем се посебно поносиш?</p></li>
+<li><p>Да ли је, по твојој процени, пројекат успешно приведен крају? Колико си ти лично задовољан/задовољна урађеним? Зашто?</p></li>
+<li><p>Који део је био посебно тежак? Како си га решио/решила? Да ли је постојао неки проблем чијим решавањем се посебно поносиш?</p></li>
 <li><p>Да ли је било накнадних измена првобитног плана? Због чега?</p></li>
 <li><p>Да ли је пројекат био користан за стицање или унапређивање неких знања или вештина? Којих?</p></li>
 </ul>
-<p>Размисли шта од овога би било интересантно другима да чују током твог представљања пројекта. Могуће је да ће наставник одвојити време за овакав разговор на часу, али и ако на часу не буде времена за ово, свакако би требало да бар у мислима прођеш кроз ову фазу рада на пројекту. То може да ти помогне да при изради следећег пројекта (било у следећој школској години или раније) избегнеш неке проблеме са којима си се срео-срела овај пут, да се боље организујеш и будеш задовољнији-задовољнија обављеним послом.</p>
+<p>Размисли шта од овога би било интересантно другима да чују током твог представљања пројекта. Могуће је да ће наставник одвојити време за овакав разговор на часу, али и ако на часу не буде времена за ово, свакако би требало да бар у мислима прођеш кроз ову фазу рада на пројекту. То може да ти помогне да при изради следећег пројекта (било у следећој школској години или раније) избегнеш неке проблеме са којима си се срео-срела овај пут, да се боље организујеш и будеш задовољнији/задовољнија обављеним послом.</p>
 <p>Ова питања ћемо поновити после сваког предложеног пројекта, да би ти била пред очима без обзира на изабрани пројекат.</p>
 </div>
 </div>
