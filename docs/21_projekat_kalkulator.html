@@ -26,13 +26,9 @@
     <link rel="stylesheet" type="text/css" href="_static/webglinteractive.css" />
     <link rel="stylesheet" type="text/css" href="_static/karel.css" />
     <link rel="stylesheet" type="text/css" href="_static/notes.css" />
-    <link rel="stylesheet" type="text/css" href="_static/simanim.css" />
-    <link rel="stylesheet" type="text/css" href="_static/pycode.css" />
-    <link rel="stylesheet" type="text/css" href="_static/p5js.css" />
     <link rel="stylesheet" type="text/css" href="_static/gallery.css" />
-    <link rel="stylesheet" type="text/css" href="_static/dbDirective.css" />
     <link rel="stylesheet" type="text/css" href="_static/associations.css" />
-    <link rel="stylesheet" type="text/css" href="_static/regex-check.css" />
+    <link rel="stylesheet" type="text/css" href="_static/editor.css" />
     <link rel="stylesheet" href="_static/user-highlights.css" type="text/css" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" type="text/css" />
     <link rel="stylesheet" href="_static/bootstrap-4.0.0-dist/css/bootstrap.min.css" type="text/css" />
@@ -112,44 +108,12 @@
     <script type="text/javascript" src="_static/karel-i18n.en.js"></script>
     <script type="text/javascript" src="_static/notes.js"></script>
     <script type="text/javascript" src="_static/pygamelib-init.js"></script>
-    <script type="text/javascript" src="_static/blockly/blockly_compressed.js"></script>
-    <script type="text/javascript" src="_static/blockly/blocks_compressed.js"></script>
-    <script type="text/javascript" src="_static/blockly/python_compressed.js"></script>
-    <script type="text/javascript" src="_static/blockly/msg-sr.js"></script>
-    <script type="text/javascript" src="_static/blockpy/utilities.js"></script>
-    <script type="text/javascript" src="_static/blockpy/python_errors.js"></script>
-    <script type="text/javascript" src="_static/blockpy/ast_node_visitor.js"></script>
-    <script type="text/javascript" src="_static/blockpy/abstract_interpreter.js"></script>
-    <script type="text/javascript" src="_static/blockpy/pytifa.js"></script>
-    <script type="text/javascript" src="_static/blockpy/abstract_interpreter_definitions.js"></script>
-    <script type="text/javascript" src="_static/blockpy/python_to_blockly.js"></script>
-    <script type="text/javascript" src="_static/blockpy/imported.js"></script>
-    <script type="text/javascript" src="_static/blockpy/blocks/class.js"></script>
-    <script type="text/javascript" src="_static/blockpy/blocks/comment.js"></script>
-    <script type="text/javascript" src="_static/blockpy/blocks/comprehensions.js"></script>
-    <script type="text/javascript" src="_static/blockpy/blocks/dict.js"></script>
-    <script type="text/javascript" src="_static/blockpy/blocks/if.js"></script>
-    <script type="text/javascript" src="_static/blockpy/blocks/io.js"></script>
-    <script type="text/javascript" src="_static/blockpy/blocks/lists.js"></script>
-    <script type="text/javascript" src="_static/blockpy/blocks/sets.js"></script>
-    <script type="text/javascript" src="_static/blockpy/blocks/loops.js"></script>
-    <script type="text/javascript" src="_static/blockpy/blocks/parking.js"></script>
-    <script type="text/javascript" src="_static/blockpy/blocks/tuple.js"></script>
-    <script type="text/javascript" src="_static/blockpy/blocks/turtles.js"></script>
-    <script type="text/javascript" src="_static/blockpy/blocks/text.js"></script>
-    <script type="text/javascript" src="_static/blockpy-modal.js"></script>
-    <script type="text/javascript" src="_static/simanim.js"></script>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/pyodide/v0.16.1/full/pyodide.js"></script>
-    <script type="text/javascript" src="_static/pycode.js"></script>
-    <script type="text/javascript" src="//toolness.github.io/p5.js-widget/p5-widget.js"></script>
-    <script type="text/javascript" src="_static/p5js.js"></script>
     <script type="text/javascript" src="_static/gallery.js"></script>
-    <script type="text/javascript" src="_static/dbDirective.js"></script>
-    <script type="text/javascript" src="_static/sql.js"></script>
     <script type="text/javascript" src="_static/associations.js"></script>
     <script type="text/javascript" src="_static/associations-i18n.en.js"></script>
-    <script type="text/javascript" src="_static/regex-check.js"></script>
-    <script type="text/javascript" src="_static/regex-check-i18n.en.js"></script>
+    <script type="text/javascript" src="_static/editor.js"></script>
+    <script type="text/javascript" src="_static/jszip.js"></script>
+    <script type="text/javascript" src="_static/editor-i18n.en.js"></script>
     <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/javascript" src="_static/jquery-ui-1.10.3.custom.min.js"></script>
     <script type="text/javascript" src="_static/jquery-fix.js"></script>
@@ -231,7 +195,9 @@
 <h2>Мотивација<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
 <p>Од ове школске године у рачунању не користиш више само природне, него и целе и децималне бројеве. Вероватно сада чешће користиш калкулатор, или програм калкулатор на телефону или рачунару. Шта мислиш колико је тешко да се направи програм калкулатор?</p>
 
-    <div class="course-box course-box-info">
+    <div class="note-wrapper infonote-type">
+        <div class="note-icon-holder"> </div>
+        <img src="../_static/img/infonote-img.svg" class="note-image infonote-image" /> 
         <div class="course-content">
             <p>
 <p>Циљ овог пројекта је да се кроз прављење калкулатора у Скречу покаже да то није сувише тешко и да се детаљније разуме како калкулатор функционише.</p>
@@ -249,15 +215,15 @@
 <ul class="simple">
 <li><p>Наш калкулатор може, а не мора да има дугме <code class="docutils literal notranslate"><span class="pre">C</span></code> за брисање свега унетог.</p></li>
 <li><p>Наш калкулатор може, а не мора да има дугме <code class="docutils literal notranslate"><span class="pre">±</span></code> за мењање предзнака броја.</p></li>
-<li><p>Наш калкулатор може, а не мора да има дугме <code class="docutils literal notranslate"><span class="pre">←</span></code> за брисање последњег унетог знака. То дугме може да допушта брисање само цифара или и знакова операција.</p></li>
+<li><p>Наш калкулатор може, а не мора да има дугме <code class="docutils literal notranslate"><span class="pre">←</span></code> за брисање последњег унетог знака. То дугме може да допушта брисање само цифара или и цифара и знакова операција.</p></li>
 </ul>
-<p>Даље, треба дефинисати како желимо да се програм понаша када се поле уноса нпр. <code class="docutils literal notranslate"><span class="pre">2+2</span></code> покуша унос нове операције, нпт. <code class="docutils literal notranslate"><span class="pre">+</span></code>. У таквој ситуацији програм може:</p>
+<p>Даље, треба дефинисати како желимо да се програм понаша када се после уноса нпр. <code class="docutils literal notranslate"><span class="pre">2+2</span></code> покуша унос нове операције, нпр. <code class="docutils literal notranslate"><span class="pre">+</span></code>. У таквој ситуацији програм може:</p>
 <ul class="simple">
-<li><p>да игрорише унос операције, а да допушта само наставк уноса броја или унос знака <code class="docutils literal notranslate"><span class="pre">=</span></code></p></li>
+<li><p>да игнорише унос операције, а да допушта само наставак уноса броја или унос знака <code class="docutils literal notranslate"><span class="pre">=</span></code></p></li>
 <li><p>да израчуна оно што је претходно унето и омогући унос нове операције. На пример, ако се унесе <code class="docutils literal notranslate"><span class="pre">2+2+</span></code>, у том тренутку изглед екрана се мења у <code class="docutils literal notranslate"><span class="pre">4+</span></code>.</p></li>
-<li><p>да настави прихватање уноса, да би касније поштовао старије рачунске радње. На пример , ако се настави са уносом и унесе <code class="docutils literal notranslate"><span class="pre">2+2+2*3=</span></code>, да се тек тада садржај екрана замени са <code class="docutils literal notranslate"><span class="pre">10</span></code> (а не са <code class="docutils literal notranslate"><span class="pre">18</span></code>, што би се добило простим рачунањем слева на десно). Ову варијанту је могуће направити, али ти је не предлажемо јер је њу знатно теже остварити од претходно набројаних варијанти.</p></li>
+<li><p>да настави прихватање уноса, да би касније поштовао приоритет рачунских операција. На пример, ако се настави са уносом и унесе <code class="docutils literal notranslate"><span class="pre">2+2+2*3=</span></code>, да се тек тада садржај екрана замени са <code class="docutils literal notranslate"><span class="pre">10</span></code> (а не са <code class="docutils literal notranslate"><span class="pre">18</span></code>, што би се добило простим рачунањем слева на десно). Ову варијанту је могуће направити, али ти је не предлажемо јер је њу знатно теже остварити од претходно набројаних варијанти.</p></li>
 </ul>
-<p>Ти изабери варијанту пројекта у складу са расположивим временом, својом инспирацијом и проценом шта од свега поменутог можеш реално да урадиш. Ми ћемо у овде разрадити варијанту пројекта у којој је екран на почетку празан, а следећим примером се илуструје понашање за наведени унос:</p>
+<p>Ти изабери варијанту пројекта у складу са расположивим временом, својом инспирацијом и проценом шта од свега поменутог можеш реално да урадиш. Ми ћемо овде разрадити варијанту пројекта у којој је екран на почетку празан, а следећим примером се илуструје понашање за наведени унос:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>унос        садржај екрана
 2           2
 3           23
@@ -318,8 +284,8 @@
 <h2>Самоевалуација<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h2>
 <p>Када направиш програм, покушај да (пре свега себи) одговориш на ова питања:</p>
 <ul class="simple">
-<li><p>Да ли је, по твојој процени, пројекат успешно приведен крају? Колико си ти лично задовољан-задовољна урађеним? Зашто?</p></li>
-<li><p>Који део је био посебно тежак? Како си га решио-решила? Да ли је постојао неки проблем чијим решавањем се посебно поносиш?</p></li>
+<li><p>Да ли је, по твојој процени, пројекат успешно приведен крају? Колико си ти лично задовољан/задовољна урађеним? Зашто?</p></li>
+<li><p>Који део је био посебно тежак? Како си га решио/решила? Да ли је постојао неки проблем чијим решавањем се посебно поносиш?</p></li>
 <li><p>Да ли је било накнадних измена првобитног плана? Због чега?</p></li>
 <li><p>Да ли је пројекат био користан за стицање или унапређивање неких знања или вештина? Којих?</p></li>
 </ul>

@@ -26,13 +26,9 @@
     <link rel="stylesheet" type="text/css" href="_static/webglinteractive.css" />
     <link rel="stylesheet" type="text/css" href="_static/karel.css" />
     <link rel="stylesheet" type="text/css" href="_static/notes.css" />
-    <link rel="stylesheet" type="text/css" href="_static/simanim.css" />
-    <link rel="stylesheet" type="text/css" href="_static/pycode.css" />
-    <link rel="stylesheet" type="text/css" href="_static/p5js.css" />
     <link rel="stylesheet" type="text/css" href="_static/gallery.css" />
-    <link rel="stylesheet" type="text/css" href="_static/dbDirective.css" />
     <link rel="stylesheet" type="text/css" href="_static/associations.css" />
-    <link rel="stylesheet" type="text/css" href="_static/regex-check.css" />
+    <link rel="stylesheet" type="text/css" href="_static/editor.css" />
     <link rel="stylesheet" href="_static/user-highlights.css" type="text/css" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" type="text/css" />
     <link rel="stylesheet" href="_static/bootstrap-4.0.0-dist/css/bootstrap.min.css" type="text/css" />
@@ -112,44 +108,12 @@
     <script type="text/javascript" src="_static/karel-i18n.en.js"></script>
     <script type="text/javascript" src="_static/notes.js"></script>
     <script type="text/javascript" src="_static/pygamelib-init.js"></script>
-    <script type="text/javascript" src="_static/blockly/blockly_compressed.js"></script>
-    <script type="text/javascript" src="_static/blockly/blocks_compressed.js"></script>
-    <script type="text/javascript" src="_static/blockly/python_compressed.js"></script>
-    <script type="text/javascript" src="_static/blockly/msg-sr.js"></script>
-    <script type="text/javascript" src="_static/blockpy/utilities.js"></script>
-    <script type="text/javascript" src="_static/blockpy/python_errors.js"></script>
-    <script type="text/javascript" src="_static/blockpy/ast_node_visitor.js"></script>
-    <script type="text/javascript" src="_static/blockpy/abstract_interpreter.js"></script>
-    <script type="text/javascript" src="_static/blockpy/pytifa.js"></script>
-    <script type="text/javascript" src="_static/blockpy/abstract_interpreter_definitions.js"></script>
-    <script type="text/javascript" src="_static/blockpy/python_to_blockly.js"></script>
-    <script type="text/javascript" src="_static/blockpy/imported.js"></script>
-    <script type="text/javascript" src="_static/blockpy/blocks/class.js"></script>
-    <script type="text/javascript" src="_static/blockpy/blocks/comment.js"></script>
-    <script type="text/javascript" src="_static/blockpy/blocks/comprehensions.js"></script>
-    <script type="text/javascript" src="_static/blockpy/blocks/dict.js"></script>
-    <script type="text/javascript" src="_static/blockpy/blocks/if.js"></script>
-    <script type="text/javascript" src="_static/blockpy/blocks/io.js"></script>
-    <script type="text/javascript" src="_static/blockpy/blocks/lists.js"></script>
-    <script type="text/javascript" src="_static/blockpy/blocks/sets.js"></script>
-    <script type="text/javascript" src="_static/blockpy/blocks/loops.js"></script>
-    <script type="text/javascript" src="_static/blockpy/blocks/parking.js"></script>
-    <script type="text/javascript" src="_static/blockpy/blocks/tuple.js"></script>
-    <script type="text/javascript" src="_static/blockpy/blocks/turtles.js"></script>
-    <script type="text/javascript" src="_static/blockpy/blocks/text.js"></script>
-    <script type="text/javascript" src="_static/blockpy-modal.js"></script>
-    <script type="text/javascript" src="_static/simanim.js"></script>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/pyodide/v0.16.1/full/pyodide.js"></script>
-    <script type="text/javascript" src="_static/pycode.js"></script>
-    <script type="text/javascript" src="//toolness.github.io/p5.js-widget/p5-widget.js"></script>
-    <script type="text/javascript" src="_static/p5js.js"></script>
     <script type="text/javascript" src="_static/gallery.js"></script>
-    <script type="text/javascript" src="_static/dbDirective.js"></script>
-    <script type="text/javascript" src="_static/sql.js"></script>
     <script type="text/javascript" src="_static/associations.js"></script>
     <script type="text/javascript" src="_static/associations-i18n.en.js"></script>
-    <script type="text/javascript" src="_static/regex-check.js"></script>
-    <script type="text/javascript" src="_static/regex-check-i18n.en.js"></script>
+    <script type="text/javascript" src="_static/editor.js"></script>
+    <script type="text/javascript" src="_static/jszip.js"></script>
+    <script type="text/javascript" src="_static/editor-i18n.en.js"></script>
     <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/javascript" src="_static/jquery-ui-1.10.3.custom.min.js"></script>
     <script type="text/javascript" src="_static/jquery-fix.js"></script>
@@ -231,7 +195,9 @@
 <h2>Мотивација<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
 <p>Ево једног мало забавнијег начина да научиш положаје неких градова на карти.</p>
 
-    <div class="course-box course-box-info">
+    <div class="note-wrapper infonote-type">
+        <div class="note-icon-holder"> </div>
+        <img src="../_static/img/infonote-img.svg" class="note-image infonote-image" /> 
         <div class="course-content">
             <p>
 <p>Циљ овог пројекта је да направиш Скреч програм, који кроз једноставну игру омогућава учење положаја градова. Програм је довољно једноставан за употребу да може да буде интересантан и млађима, а повезан је са школским градивом па може да буде интересантан и старијима.</p>
@@ -256,7 +222,7 @@
 <h2>Анализа и планирање<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="id5">
 <h3>Ресурси<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h3>
-<p>Очигледно, биће потребно да се нађе одговарајућа нема карта, која је слободна за употребу. Ако ниси сигуран-сигурна како да то урадиш, консултуј се са наставником.</p>
+<p>Очигледно, биће потребно да се нађе одговарајућа нема карта, која је слободна за употребу. Ако ниси сигуран/сигурна како да то урадиш, консултуј се са наставником.</p>
 <p>Није неопходно за пројекат, али може да буде корисно да се пронађе карта исте величине са називима градова. Она може да послужи као друга позадина позорнице у току припреме, односно израде пројекта, ради лакшег постављања кружића на права места. Карта са називима градова се не користи током извршавања програма.</p>
 </div>
 <div class="section" id="id6">
@@ -318,8 +284,8 @@
 <h2>Самоевалуација<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h2>
 <p>Када направиш програм, покушај да (пре свега себи) одговориш на ова питања:</p>
 <ul class="simple">
-<li><p>Да ли је, по твојој процени, пројекат успешно приведен крају? Колико си ти лично задовољан-задовољна урађеним? Зашто?</p></li>
-<li><p>Који део је био посебно тежак? Како си га решио-решила? Да ли је постојао неки проблем чијим решавањем се посебно поносиш?</p></li>
+<li><p>Да ли је, по твојој процени, пројекат успешно приведен крају? Колико си ти лично задовољан/задовољна урађеним? Зашто?</p></li>
+<li><p>Који део је био посебно тежак? Како си га решио/решила? Да ли је постојао неки проблем чијим решавањем се посебно поносиш?</p></li>
 <li><p>Да ли је било накнадних измена првобитног плана? Због чега?</p></li>
 <li><p>Да ли је пројекат био користан за стицање или унапређивање неких знања или вештина? Којих?</p></li>
 </ul>

@@ -26,13 +26,9 @@
     <link rel="stylesheet" type="text/css" href="_static/webglinteractive.css" />
     <link rel="stylesheet" type="text/css" href="_static/karel.css" />
     <link rel="stylesheet" type="text/css" href="_static/notes.css" />
-    <link rel="stylesheet" type="text/css" href="_static/simanim.css" />
-    <link rel="stylesheet" type="text/css" href="_static/pycode.css" />
-    <link rel="stylesheet" type="text/css" href="_static/p5js.css" />
     <link rel="stylesheet" type="text/css" href="_static/gallery.css" />
-    <link rel="stylesheet" type="text/css" href="_static/dbDirective.css" />
     <link rel="stylesheet" type="text/css" href="_static/associations.css" />
-    <link rel="stylesheet" type="text/css" href="_static/regex-check.css" />
+    <link rel="stylesheet" type="text/css" href="_static/editor.css" />
     <link rel="stylesheet" href="_static/user-highlights.css" type="text/css" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" type="text/css" />
     <link rel="stylesheet" href="_static/bootstrap-4.0.0-dist/css/bootstrap.min.css" type="text/css" />
@@ -112,44 +108,12 @@
     <script type="text/javascript" src="_static/karel-i18n.en.js"></script>
     <script type="text/javascript" src="_static/notes.js"></script>
     <script type="text/javascript" src="_static/pygamelib-init.js"></script>
-    <script type="text/javascript" src="_static/blockly/blockly_compressed.js"></script>
-    <script type="text/javascript" src="_static/blockly/blocks_compressed.js"></script>
-    <script type="text/javascript" src="_static/blockly/python_compressed.js"></script>
-    <script type="text/javascript" src="_static/blockly/msg-sr.js"></script>
-    <script type="text/javascript" src="_static/blockpy/utilities.js"></script>
-    <script type="text/javascript" src="_static/blockpy/python_errors.js"></script>
-    <script type="text/javascript" src="_static/blockpy/ast_node_visitor.js"></script>
-    <script type="text/javascript" src="_static/blockpy/abstract_interpreter.js"></script>
-    <script type="text/javascript" src="_static/blockpy/pytifa.js"></script>
-    <script type="text/javascript" src="_static/blockpy/abstract_interpreter_definitions.js"></script>
-    <script type="text/javascript" src="_static/blockpy/python_to_blockly.js"></script>
-    <script type="text/javascript" src="_static/blockpy/imported.js"></script>
-    <script type="text/javascript" src="_static/blockpy/blocks/class.js"></script>
-    <script type="text/javascript" src="_static/blockpy/blocks/comment.js"></script>
-    <script type="text/javascript" src="_static/blockpy/blocks/comprehensions.js"></script>
-    <script type="text/javascript" src="_static/blockpy/blocks/dict.js"></script>
-    <script type="text/javascript" src="_static/blockpy/blocks/if.js"></script>
-    <script type="text/javascript" src="_static/blockpy/blocks/io.js"></script>
-    <script type="text/javascript" src="_static/blockpy/blocks/lists.js"></script>
-    <script type="text/javascript" src="_static/blockpy/blocks/sets.js"></script>
-    <script type="text/javascript" src="_static/blockpy/blocks/loops.js"></script>
-    <script type="text/javascript" src="_static/blockpy/blocks/parking.js"></script>
-    <script type="text/javascript" src="_static/blockpy/blocks/tuple.js"></script>
-    <script type="text/javascript" src="_static/blockpy/blocks/turtles.js"></script>
-    <script type="text/javascript" src="_static/blockpy/blocks/text.js"></script>
-    <script type="text/javascript" src="_static/blockpy-modal.js"></script>
-    <script type="text/javascript" src="_static/simanim.js"></script>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/pyodide/v0.16.1/full/pyodide.js"></script>
-    <script type="text/javascript" src="_static/pycode.js"></script>
-    <script type="text/javascript" src="//toolness.github.io/p5.js-widget/p5-widget.js"></script>
-    <script type="text/javascript" src="_static/p5js.js"></script>
     <script type="text/javascript" src="_static/gallery.js"></script>
-    <script type="text/javascript" src="_static/dbDirective.js"></script>
-    <script type="text/javascript" src="_static/sql.js"></script>
     <script type="text/javascript" src="_static/associations.js"></script>
     <script type="text/javascript" src="_static/associations-i18n.en.js"></script>
-    <script type="text/javascript" src="_static/regex-check.js"></script>
-    <script type="text/javascript" src="_static/regex-check-i18n.en.js"></script>
+    <script type="text/javascript" src="_static/editor.js"></script>
+    <script type="text/javascript" src="_static/jszip.js"></script>
+    <script type="text/javascript" src="_static/editor-i18n.en.js"></script>
     <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/javascript" src="_static/jquery-ui-1.10.3.custom.min.js"></script>
     <script type="text/javascript" src="_static/jquery-fix.js"></script>
@@ -230,7 +194,9 @@
 <h2>Мотивација<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
 <p>Једначине се појављују у разним предметима, а не само у математици. Ускоро ћеш почети да учиш физику и хемију, у којима ћеш такође често да решаваш једначине. Зато је потребно да добро увежбаш решавање једначина.</p>
 
-    <div class="course-box course-box-info">
+    <div class="note-wrapper infonote-type">
+        <div class="note-icon-holder"> </div>
+        <img src="../_static/img/infonote-img.svg" class="note-image infonote-image" /> 
         <div class="course-content">
             <p>
 <p>Циљ овог пројекта је да направиш Скреч програм, који омогућава вежбање решавања једначина. Чак и ако ти већ добро (брзо и тачно) решаваш једначине, сигурно има твојих другова и другарица, којима је таква вежба потребна.</p>
@@ -424,7 +390,7 @@ pygamebg.frame_loop(25, new_frame, handle_event)
 <div class="section" id="id5">
 <h3>Ликови<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h3>
 <p>Најзгодније је да свако дугме буде посебан лик. Осим тих ликова, имаћемо и главни лик - мачка, који поставља задатак, прати да ли је једначина решена и честита када јесте.</p>
-<p>Костиме ликова је лакше направити ван окружења Скреч. Могуће је, на пример, у програму <em>Бојанка</em> (<em>Paint</em>) откуцати текст сваког дугмета и сачувати га као слику. Те слике касније увозимо из окружења Скреч, било као нове ликове, било као костиме за већ направљене ликове.</p>
+<p>Костиме ликова је лакше направити ван окружења Скреч. Могуће је, на пример, у програму <em>Бојанка</em> (<em>Paint</em>) откуцати текст сваког дугмета и сачувати га као слику. Те слике касније увозимо у окружење Скреч, било као нове ликове, било као костиме за већ направљене ликове.</p>
 </div>
 <div class="section" id="id6">
 <h3>Скрипте<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h3>
@@ -440,8 +406,8 @@ pygamebg.frame_loop(25, new_frame, handle_event)
 <p>За сада планирамо да имамо ове променљиве у пројекту:</p>
 <ul class="simple">
 <li><p>променљива <code class="docutils literal notranslate"><span class="pre">уз</span> <span class="pre">X</span> <span class="pre">лево</span></code>, која представља број уз <span class="math notranslate nohighlight">\(X\)</span> на левој страни једначине (на слици број -9)</p></li>
-<li><p>променљива <code class="docutils literal notranslate"><span class="pre">уз</span> <span class="pre">X</span> <span class="pre">десно</span></code>, која представља број без <span class="math notranslate nohighlight">\(X\)</span> на левој страни једначине (на слици број -8)</p></li>
-<li><p>променљива <code class="docutils literal notranslate"><span class="pre">без</span> <span class="pre">X</span> <span class="pre">лево</span></code>, која представља број уз <span class="math notranslate nohighlight">\(X\)</span> на десној страни једначине (на слици број 10)</p></li>
+<li><p>променљива <code class="docutils literal notranslate"><span class="pre">без</span> <span class="pre">X</span> <span class="pre">лево</span></code>, која представља број без <span class="math notranslate nohighlight">\(X\)</span> на левој страни једначине (на слици број -8)</p></li>
+<li><p>променљива <code class="docutils literal notranslate"><span class="pre">уз</span> <span class="pre">X</span> <span class="pre">десно</span></code>, која представља број уз <span class="math notranslate nohighlight">\(X\)</span> на десној страни једначине (на слици број 10)</p></li>
 <li><p>променљива <code class="docutils literal notranslate"><span class="pre">без</span> <span class="pre">X</span> <span class="pre">десно</span></code>, која представља број без <span class="math notranslate nohighlight">\(X\)</span> на десној страни једначине (на слици број 9)</p></li>
 <li><p>променљива <code class="docutils literal notranslate"><span class="pre">текст</span> <span class="pre">једначине</span></code>, која се види на позорници и садржи текст једначине</p></li>
 </ul>
@@ -455,7 +421,7 @@ pygamebg.frame_loop(25, new_frame, handle_event)
 <div class="section" id="id8">
 <h3>Мала помоћ<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h3>
 <p>За решавање једначине, дугмад <a class="reference internal" href="_images/jednacine_dugme_okreni.png"><img alt="дугме окрени" src="_images/jednacine_dugme_okreni.png" style="height: 18px;" /></a> и <a class="reference internal" href="_images/jednacine_dugme_plus_minus.png"><img alt="дугме плус минус" src="_images/jednacine_dugme_plus_minus.png" style="height: 18px;" /></a> нису неопходна и могу и да се изоставе из пројекта. Ипак, додавање једног или оба ова дугмета би олакшало кориснику да дође до свог циља - решења једначине.</p>
-<p>Ако процењујеш да ти је сувише компликовано да испорограмираш ова два дугмета, направи пројекат без њих. Уколико прихватиш изазов и одлучиш се за ширу верзију пројекта, нудимо ти малу помоћ.</p>
+<p>Ако процењујеш да ти је сувише компликовано да испрограмираш ова два дугмета, направи пројекат без њих. Уколико прихватиш изазов и одлучиш се за ширу верзију пројекта, нудимо ти малу помоћ.</p>
 <p>Скрипта која се извршава кликом на дугме <a class="reference internal" href="_images/jednacine_dugme_plus_minus.png"><img alt="дугме плус минус" src="_images/jednacine_dugme_plus_minus.png" style="height: 18px;" /></a> могла би да изгледа отприлике овако:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Када</span> <span class="n">је</span> <span class="n">кликнуто</span> <span class="n">на</span> <span class="n">овај</span> <span class="n">лик</span><span class="p">:</span>
     <span class="n">Нека</span> <span class="n">уз_X_лево</span>  <span class="n">буде</span> <span class="o">-</span><span class="mi">1</span> <span class="o">*</span> <span class="n">уз_X_лево</span>
@@ -491,8 +457,8 @@ pygamebg.frame_loop(25, new_frame, handle_event)
 <h2>Самоевалуација<a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h2>
 <p>Када направиш програм, покушај да (пре свега себи) одговориш на ова питања:</p>
 <ul class="simple">
-<li><p>Да ли је, по твојој процени, пројекат успешно приведен крају? Колико си ти лично задовољан-задовољна урађеним? Зашто?</p></li>
-<li><p>Који део је био посебно тежак? Како си га решио-решила? Да ли је постојао неки проблем чијим решавањем се посебно поносиш?</p></li>
+<li><p>Да ли је, по твојој процени, пројекат успешно приведен крају? Колико си ти лично задовољан/задовољна урађеним? Зашто?</p></li>
+<li><p>Који део је био посебно тежак? Како си га решио/решила? Да ли је постојао неки проблем чијим решавањем се посебно поносиш?</p></li>
 <li><p>Да ли је било накнадних измена првобитног плана? Због чега?</p></li>
 <li><p>Да ли је пројекат био користан за стицање или унапређивање неких знања или вештина? Којих?</p></li>
 </ul>
