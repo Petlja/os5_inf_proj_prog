@@ -17,6 +17,7 @@
 
     01_uvod.rst
     02_o_projektima.rst
+    10_projekat_remix_igre_pong
     11_projekat_polozaji_gradova.rst
     12_projekat_mececeve_mene.rst
     13_projekat_casovne_zone.rst
