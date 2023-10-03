@@ -2,7 +2,7 @@
 
 Ovaj repozitorijum posvećen je priručniku za Projektnu nastavu za peti razred osnovne škole računarstvo. 
 
-Kurs je na Petljom portalu dotupan ovde: [https://petlja.org/biblioteka/r/kursevi/5_projzad_racunarstvo_scratch](https://petlja.org/biblioteka/r/kursevi/5_projzad_racunarstvo_scratch)
+Kurs je na Petljinom portalu dotupan ovde: [https://petlja.org/biblioteka/r/kursevi/5_projzad_racunarstvo_scratch](https://petlja.org/biblioteka/r/kursevi/5_projzad_racunarstvo_scratch)
 
 
 ## Konverzija u *HTML*
